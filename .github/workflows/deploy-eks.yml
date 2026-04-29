@@ -39,8 +39,6 @@ jobs:
           ECR: ${{ secrets.ECR_FRONTEND_URI }}
           TAG: ${{ github.sha }}
         run: |
-          # REACT_APP_API_BASE_URL="" → API 호출이 /api/... 상대경로로 변환
-          # nginx.conf에서 /api/ → backend-service:8080 으로 내부 프록시 처리
           docker build \
             --build-arg REACT_APP_API_BASE_URL="" \
             -t $ECR:$TAG \

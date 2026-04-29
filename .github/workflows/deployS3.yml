@@ -2,7 +2,7 @@ name: Deploy Frontend to Amazon S3
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 env:
   AWS_REGION: ap-northeast-2
